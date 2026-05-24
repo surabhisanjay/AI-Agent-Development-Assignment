@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closira Customer Support Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">Closira</h1>
+                <p class="tagline">Customer Support Assistant</p>
+            </div>
+            <div class="header-actions">
+                <button id="resetBtn" class="btn btn-secondary" title="Start new conversation">
+                    <span>🔄</span> New Chat
+                </button>
+                <button id="statsBtn" class="btn btn-info" title="View conversation stats">
+                    <span>📊</span> Stats
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Conversation Info</h3>
+                    <div class="info-box">
+                        <div class="info-item">
+                            <span class="label">Status:</span>
+                            <span id="statusIndicator" class="status">Active</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Messages:</span>
+                            <span id="messageCount">0</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Unanswered:</span>
+                            <span id="unansweredCount">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Lead Data</h3>
+                    <div class="info-box">
+                        <div class="info-item">
+                            <span class="label">Business:</span>
+                            <span id="businessType">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Team Size:</span>
+                            <span id="teamSize">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Tools:</span>
+                            <span id="toolsUsed">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Quality:</span>
+                            <span id="leadQuality" class="badge">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section" id="escalationSection" style="display: none;">
+                    <h3>⚠️ Escalation</h3>
+                    <div class="info-box escalation">
+                        <div class="info-item">
+                            <span class="label">Reason:</span>
+                            <span id="escalationReason">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Confidence:</span>
+                            <span id="escalationConfidence">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Queue:</span>
+                            <span id="assignedQueue">-</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Chat Area -->
+            <section class="chat-area">
+                <!-- Messages Container -->
+                <div id="messagesContainer" class="messages-container">
+                    <div class="welcome-message">
+                        <h2>Welcome to Closira Support</h2>
+                        <p>Hi! I'm here to help. Ask me about our services, pricing, or anything else.</p>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-area">
+                    <div id="qualificationIndicator" class="qualification-indicator" style="display: none;">
+                        <p>📋 Question <span id="questionNum">1</span> of 3 for lead qualification</p>
+                    </div>
+                    <div id="qualificationOptions" class="qualification-options" style="display: none;"></div>
+                    <form id="messageForm" class="message-form">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            class="message-input" 
+                            placeholder="Type your message..." 
+                            autocomplete="off"
+                        >
+                        <button type="submit" class="btn btn-primary send-btn">
+                            <span>Send</span> →
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Stats Modal -->
+    <div id="statsModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Conversation Statistics</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="statsContent">
+                <!-- Stats will be populated here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Completion Modal -->
+    <div id="completionModal" class="modal" style="display: none;">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h2>Conversation Summary</h2>
+                <button class="close-btn" onclick="closeCompletionModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="completionContent">
+                <!-- Summary will be populated here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="newConversation()">Start New Chat</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

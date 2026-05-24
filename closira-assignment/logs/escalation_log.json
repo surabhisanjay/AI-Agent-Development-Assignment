@@ -1,0 +1,107 @@
+[
+  {
+    "timestamp": "2026-05-24T10:01:40.509516",
+    "customer_messages": [
+      "what are your botox prices",
+      "what are your botox prices",
+      "what are your botox prices",
+      "what are your botox pries"
+    ],
+    "escalation_reason": "out_of_scope",
+    "escalation_confidence": 0.75,
+    "lead_quality": "Medium",
+    "unanswered_count": 1,
+    "assigned_to": "Product Specialists"
+  },
+  {
+    "timestamp": "2026-05-24T11:36:13.986531",
+    "customer_messages": [
+      "hi"
+    ],
+    "escalation_reason": "out_of_scope",
+    "escalation_confidence": 0.75,
+    "lead_quality": "Medium",
+    "unanswered_count": 1,
+    "assigned_to": "Product Specialists"
+  },
+  {
+    "timestamp": "2026-05-24T11:36:13.987855",
+    "customer_messages": [
+      "hi",
+      "hi"
+    ],
+    "escalation_reason": "out_of_scope",
+    "escalation_confidence": 0.75,
+    "lead_quality": "Medium",
+    "unanswered_count": 2,
+    "assigned_to": "Product Specialists"
+  },
+  {
+    "timestamp": "2026-05-24T11:36:13.988083",
+    "customer_messages": [
+      "hi",
+      "hi",
+      "hi"
+    ],
+    "escalation_reason": "out_of_scope",
+    "escalation_confidence": 0.8,
+    "lead_quality": "Medium",
+    "unanswered_count": 3,
+    "assigned_to": "Product Specialists"
+  },
+  {
+    "timestamp": "2026-05-24T11:36:13.988292",
+    "customer_messages": [
+      "hi",
+      "hi",
+      "hi",
+      "hi"
+    ],
+    "escalation_reason": "out_of_scope",
+    "escalation_confidence": 0.8,
+    "lead_quality": "Medium",
+    "unanswered_count": 4,
+    "assigned_to": "Product Specialists"
+  },
+  {
+    "timestamp": "2026-05-24T11:36:13.988503",
+    "customer_messages": [
+      "hi",
+      "hi",
+      "hi",
+      "hi",
+      "hi"
+    ],
+    "escalation_reason": "out_of_scope",
+    "escalation_confidence": 0.8,
+    "lead_quality": "Medium",
+    "unanswered_count": 5,
+    "assigned_to": "Product Specialists"
+  },
+  {
+    "timestamp": "2026-05-24T11:38:12.751759",
+    "customer_messages": [
+      "what are your botox prices",
+      "what are your operational hours",
+      "I'm absolutely unhappy with the service you provided. Your staff was rude and unprofessional!"
+    ],
+    "escalation_reason": "complaint",
+    "escalation_confidence": 0.725,
+    "lead_quality": "Medium",
+    "unanswered_count": 1,
+    "assigned_to": "Support Escalation Queue"
+  },
+  {
+    "timestamp": "2026-05-24T11:43:35.996667",
+    "customer_messages": [
+      "what are your botox prices",
+      "what are your operational hours",
+      "What are the side effects of Botox? How long does the treatment last?"
+    ],
+    "escalation_reason": "out_of_scope",
+    "escalation_confidence": 0.825,
+    "lead_quality": "Medium",
+    "unanswered_count": 1,
+    "assigned_to": "Product Specialists"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "company_name": "Closira Dental & Aesthetics",
+  "services": [
+    {
+      "name": "Botox",
+      "description": "Botox injections for wrinkle reduction",
+      "price_range": "£200-400",
+      "duration_days": null,
+      "notes": "Duration information not available in current SOP"
+    },
+    {
+      "name": "Dental Cleaning",
+      "description": "Professional dental cleaning and whitening",
+      "price_range": "£150-300",
+      "duration_days": null,
+      "notes": ""
+    },
+    {
+      "name": "Teeth Whitening",
+      "description": "Professional teeth whitening treatments",
+      "price_range": "£100-250",
+      "duration_days": null,
+      "notes": ""
+    },
+    {
+      "name": "Implants",
+      "description": "Dental implant procedures",
+      "price_range": "£1500-3000",
+      "duration_days": null,
+      "notes": "Requires consultation"
+    }
+  ],
+  "escalation_rules": {
+    "keywords": ["complaint", "unhappy", "terrible", "worst", "emergency", "urgent"],
+    "medical_questions": true,
+    "pricing_negotiation": true,
+    "max_unanswered_before_escalation": 2,
+    "human_request": true
+  },
+  "operating_hours": {
+    "monday_friday": "09:00-18:00",
+    "saturday": "10:00-14:00",
+    "sunday": "Closed"
+  },
+  "contact_methods": [
+    "Phone: +44 20 7123 4567",
+    "Email: support@closira.com",
+    "WhatsApp: +44 20 7123 4567"
+  ],
+  "booking_process": "Customers can book appointments through our website or by contacting support directly.",
+  "cancellation_policy": "Cancellations must be made 24 hours in advance for a full refund.",
+  "payment_methods": ["Credit Card", "Debit Card", "Bank Transfer", "PayPal"]
+}
